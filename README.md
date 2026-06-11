@@ -36,12 +36,16 @@ Git by `.gitignore`.
 
 ## Setup
 
-Create an environment and install the required packages:
+Create a Python 3.10 environment and install the required packages. The
+project includes `.python-version` for `pyenv`; Python 3.14 is not supported by
+TensorFlow for this project.
 
 ```bash
+pyenv install -s 3.10.14
+pyenv local 3.10.14
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ## Multi-Recording Dataset
@@ -70,8 +74,8 @@ Train using recording-level splits from a scenario/capture manifest:
 ```bash
 python src/train.py \
   --manifest data/recordings_manifest.csv \
-  --output-dir models \
-  --max-windows-per-class 500
+  --pooling avgmax \
+  --max-windows-per-class 2000
 ```
 
 This prevents windows from the same capture appearing in both training and

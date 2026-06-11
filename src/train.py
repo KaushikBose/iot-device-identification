@@ -37,6 +37,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=SEED)
     parser.add_argument("--no-balance", action="store_true")
     parser.add_argument(
+        "--pooling",
+        type=str,
+        choices=["avg", "max", "avgmax", "flatten"],
+        default="avg",
+        help="Pooling layer to use before classification head.",
+    )
+    parser.add_argument(
         "--max-windows-per-class",
         type=int,
         default=None,
@@ -133,6 +140,7 @@ def main() -> None:
         input_shape=x_train.shape[1:],
         num_classes=NUM_CLASSES,
         learning_rate=args.learning_rate,
+        pooling=args.pooling,
     )
     model.summary()
 
@@ -202,6 +210,7 @@ def main() -> None:
         "input_shape": list(x_train.shape[1:]),
         "balanced": not args.no_balance,
         "max_windows_per_class": args.max_windows_per_class,
+        "pooling": args.pooling,
     }
     (args.output_dir / "metadata.json").write_text(
         json.dumps(metadata, indent=2),

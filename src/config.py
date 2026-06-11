@@ -5,7 +5,7 @@ from __future__ import annotations
 WINDOW_SIZE = 4096
 NUM_CLASSES = 6
 BATCH_SIZE = 32
-EPOCHS = 25
+EPOCHS = 50
 SEED = 42
 
 CLASSES = [

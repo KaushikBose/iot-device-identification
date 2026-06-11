@@ -12,12 +12,12 @@
     "manifest": "data/recordings_manifest.csv",
     "recordings_by_split": {
       "test": 12,
-      "train": 6,
-      "validation": 6
+      "train": 192,
+      "validation": 48
     },
     "recordings_by_scenario": {
-      "anotherroom": 12,
-      "upstairs": 12
+      "anotherroom": 126,
+      "upstairs": 126
     },
     "classes_by_split": {
       "test": [
@@ -48,14 +48,15 @@
   },
   "test_evaluation_role": "held-out-recordings-from-manifest",
   "test_evaluation_unit": "non_overlapping_window",
-  "test_samples": 3000,
-  "test_loss": 1.7703731060028076,
-  "test_accuracy": 0.6330000162124634,
+  "test_samples": 12000,
+  "test_loss": 0.7004515528678894,
+  "test_accuracy": 0.7799999713897705,
   "input_shape": [
     257,
     61,
     1
   ],
   "balanced": true,
-  "max_windows_per_class": 500
+  "max_windows_per_class": 2000,
+  "pooling": "avgmax"
 }
