@@ -33,8 +33,5 @@ venv.bak/
 .DS_Store
 Thumbs.db
 
-# Results (optional: uncomment to exclude)
-results/
-
 # pytest
 .pytest_cache/

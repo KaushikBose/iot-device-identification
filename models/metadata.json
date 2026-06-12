@@ -49,8 +49,8 @@
   "test_evaluation_role": "held-out-recordings-from-manifest",
   "test_evaluation_unit": "non_overlapping_window",
   "test_samples": 12000,
-  "test_loss": 0.7004515528678894,
-  "test_accuracy": 0.7799999713897705,
+  "test_loss": 0.7817128300666809,
+  "test_accuracy": 0.7897499799728394,
   "input_shape": [
     257,
     61,

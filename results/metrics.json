@@ -1,0 +1,38 @@
+{
+  "evaluation_role": "external-file-level-ensemble",
+  "evaluation_unit": "source_file",
+  "data_dir": null,
+  "manifest": "data/recordings_manifest.csv",
+  "manifest_split": "test",
+  "model": "models/best_iot_classifier.h5",
+  "files": 12,
+  "correct_files": 12,
+  "accuracy": 1.0,
+  "accuracy_ci_95_wilson": {
+    "low": 0.7574992425007574,
+    "high": 1.0
+  },
+  "interpretation": "Each file contributes one prediction; window count is not the number of independent test examples.",
+  "scenario_metrics": {
+    "anotherroom": {
+      "files": 6,
+      "correct_files": 6,
+      "accuracy": 1.0,
+      "accuracy_ci_95_wilson": {
+        "low": 0.6096569663469354,
+        "high": 1.0
+      }
+    },
+    "upstairs": {
+      "files": 6,
+      "correct_files": 6,
+      "accuracy": 1.0,
+      "accuracy_ci_95_wilson": {
+        "low": 0.6096569663469354,
+        "high": 1.0
+      }
+    }
+  },
+  "window_size": 4096,
+  "step": 1024
+}

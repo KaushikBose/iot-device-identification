@@ -1,0 +1,13 @@
+file,true_label,scenario,capture_id,split,predicted_label,confidence,windows,correct
+data/recordings/dooralarm/anotherroom_capture21.npy,dooralarm,anotherroom,21,test,dooralarm,0.74604911,9762,1
+data/recordings/dooralarm/upstairs_capture21.npy,dooralarm,upstairs,21,test,dooralarm,0.61414587,9762,1
+data/recordings/lora/anotherroom_capture21.npy,lora,anotherroom,21,test,lora,0.95777261,9762,1
+data/recordings/lora/upstairs_capture21.npy,lora,upstairs,21,test,lora,0.98801047,9762,1
+data/recordings/microphone/anotherroom_capture21.npy,microphone,anotherroom,21,test,microphone,0.99977404,9762,1
+data/recordings/microphone/upstairs_capture21.npy,microphone,upstairs,21,test,microphone,0.99919552,9762,1
+data/recordings/mbus/anotherroom_capture21.npy,mbus,anotherroom,21,test,mbus,0.42582262,9762,1
+data/recordings/mbus/upstairs_capture21.npy,mbus,upstairs,21,test,mbus,0.92739767,9762,1
+data/recordings/sigfox/anotherroom_capture21.npy,sigfox,anotherroom,21,test,sigfox,0.56679726,9762,1
+data/recordings/sigfox/upstairs_capture21.npy,sigfox,upstairs,21,test,sigfox,0.59696627,9762,1
+data/recordings/miwi/anotherroom_capture21.npy,miwi,anotherroom,21,test,miwi,0.52892715,9762,1
+data/recordings/miwi/upstairs_capture21.npy,miwi,upstairs,21,test,miwi,0.99229985,9762,1
