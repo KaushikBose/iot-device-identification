@@ -1,0 +1,26 @@
+{
+  "evaluation_role": "external-window-evaluation",
+  "evaluation_unit": "non_overlapping_window",
+  "data_dir": null,
+  "manifest": "data/recordings_manifest.csv",
+  "manifest_split": "test",
+  "model": "models/manifest_avgmax_2000/best_iot_classifier.h5",
+  "samples": 43938,
+  "test_metrics": {
+    "device_accuracy": 0.6601119637489319,
+    "device_loss": 0.7442930340766907,
+    "location_accuracy": 0.6104283332824707,
+    "location_loss": 0.8669725060462952,
+    "loss": 1.178059458732605
+  },
+  "class_distribution": {
+    "dooralarm": 7323,
+    "lora": 7323,
+    "microphone": 7323,
+    "mbus": 7323,
+    "sigfox": 7323,
+    "miwi": 7323
+  },
+  "balanced": false,
+  "max_windows_per_class": null
+}

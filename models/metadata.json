@@ -16,12 +16,13 @@
   "source": {
     "manifest": "data/recordings_manifest.csv",
     "recordings_by_split": {
-      "test": 12,
-      "train": 192,
-      "validation": 48
+      "test": 18,
+      "train": 288,
+      "validation": 72
     },
     "recordings_by_scenario": {
       "anotherroom": 126,
+      "sameroom": 126,
       "upstairs": 126
     },
     "classes_by_split": {
@@ -53,12 +54,13 @@
   },
   "test_evaluation_role": "held-out-recordings-from-manifest",
   "test_evaluation_unit": "non_overlapping_window",
-  "test_samples": 12000,
+  "test_samples": 43938,
   "test_metrics": {
-    "loss": 0.8759545683860779,
-    "compile_metrics": 0.5932031869888306,
-    "device_loss": 0.5655031800270081,
-    "location_loss": 0.7410833239555359
+    "device_accuracy": 0.787791907787323,
+    "device_loss": 0.6680325865745544,
+    "location_accuracy": 0.6490054130554199,
+    "location_loss": 0.7096875905990601,
+    "loss": 1.0225741863250732
   },
   "input_shape": [
     257,
@@ -66,6 +68,6 @@
     1
   ],
   "balanced": true,
-  "max_windows_per_class": 2000,
+  "max_windows_per_class": 10000,
   "pooling": "avgmax"
 }

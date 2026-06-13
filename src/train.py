@@ -163,10 +163,11 @@ def main() -> None:
     best_model_path = args.output_dir / "best_iot_classifier.h5"
     callbacks = [
         ReduceLROnPlateau(
-            monitor="val_loss",
+            monitor="val_device_loss",
             factor=0.5,
             patience=3,
             min_lr=1e-6,
+            mode="min",
             verbose=1,
         ),
         EarlyStopping(
@@ -201,13 +202,12 @@ def main() -> None:
     final_model_path = args.output_dir / "final_iot_classifier.h5"
     model.save(str(final_model_path))
 
-    test_results = model.evaluate(
+    test_metrics = model.evaluate(
         x_test,
         {"device": y_dev_test_cat, "location": y_loc_test_cat},
         verbose=0,
+        return_dict=True,
     )
-    metrics_names = model.metrics_names
-    test_metrics = dict(zip(metrics_names, test_results))
 
     pred_device_probs, pred_location_probs = model.predict(x_test)
     pred_device_classes = np.argmax(pred_device_probs, axis=1)

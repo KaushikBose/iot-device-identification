@@ -11,6 +11,7 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 
+from aggregation import AGGREGATION_MODES
 from config import BATCH_SIZE, CLASSES, EPOCHS, NUM_CLASSES, NUM_LOCATIONS, SEED, LOCATIONS
 from dataset import build_dataset_from_recordings, load_manifest
 from evaluation import (
@@ -49,6 +50,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--learning-rate", type=float, default=3e-4)
     parser.add_argument("--seed", type=int, default=SEED)
     parser.add_argument("--no-balance", action="store_true")
+    parser.add_argument(
+        "--aggregation",
+        choices=AGGREGATION_MODES,
+        default="mean",
+        help="How to combine per-window probabilities into file-level predictions.",
+    )
+    parser.add_argument(
+        "--top-fraction",
+        type=float,
+        default=0.25,
+        help="Fraction of most confident windows used by top_confidence_mean aggregation.",
+    )
     parser.add_argument(
         "--max-windows-per-class",
         type=int,
@@ -161,10 +174,11 @@ def main() -> None:
 
         callbacks = [
             ReduceLROnPlateau(
-                monitor="val_loss",
+                monitor="val_device_loss",
                 factor=0.5,
                 patience=3,
                 min_lr=1e-6,
+                mode="min",
                 verbose=0,
             ),
             EarlyStopping(
@@ -204,6 +218,8 @@ def main() -> None:
                 locations=locations,
                 window_size=4096,
                 step=1024,
+                aggregation=args.aggregation,
+                top_fraction=args.top_fraction,
             )
 
             true_dev_idx = CLASSES.index(recording.class_name)
@@ -327,6 +343,8 @@ def main() -> None:
     metrics = {
         "mode": args.mode,
         "pooling": args.pooling,
+        "aggregation": args.aggregation,
+        "top_fraction": float(args.top_fraction),
         "epochs": args.epochs,
         "folds": len(folds),
         "mean_fold_device_accuracy": fold_dev_acc_mean,

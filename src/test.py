@@ -10,6 +10,7 @@ from pathlib import Path
 import numpy as np
 import tensorflow as tf
 
+from aggregation import AGGREGATION_MODES
 from config import WINDOW_SIZE, LOCATIONS
 from dataset import legacy_recordings, load_manifest
 from evaluation import (
@@ -69,6 +70,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--window-size", type=int, default=WINDOW_SIZE)
     parser.add_argument("--step", type=int, default=1024)
     parser.add_argument(
+        "--aggregation",
+        choices=AGGREGATION_MODES,
+        default="mean",
+        help="How to combine per-window probabilities into each file prediction.",
+    )
+    parser.add_argument(
+        "--top-fraction",
+        type=float,
+        default=0.25,
+        help="Fraction of most confident windows used by top_confidence_mean aggregation.",
+    )
+    parser.add_argument(
         "--file-template",
         help="Optional file pattern such as '{class_name}_test.npy'. Defaults to auto-detecting raw and test names.",
     )
@@ -120,6 +133,8 @@ def run_test(
     allow_missing: bool = True,
     manifest_path: Path | None = None,
     manifest_split: str = "test",
+    aggregation: str = "mean",
+    top_fraction: float = 0.25,
 ) -> dict[str, object]:
     """Run file-level sliding-window ensemble tests and save reports."""
     classes = load_classes(metadata_path)
@@ -162,6 +177,8 @@ def run_test(
             locations=locations,
             window_size=window_size,
             step=step,
+            aggregation=aggregation,
+            top_fraction=top_fraction,
         )
 
         true_dev_idx = classes.index(recording.class_name)
@@ -284,6 +301,8 @@ def run_test(
         "scenario_metrics": scenario_metrics,
         "window_size": int(window_size),
         "step": int(step),
+        "aggregation": aggregation,
+        "top_fraction": float(top_fraction),
     }
     (output_dir / "metrics.json").write_text(
         json.dumps(metrics, indent=2),
@@ -361,6 +380,8 @@ def main() -> None:
         allow_missing=not args.require_all_classes,
         manifest_path=args.manifest,
         manifest_split=args.manifest_split,
+        aggregation=args.aggregation,
+        top_fraction=args.top_fraction,
     )
 
 

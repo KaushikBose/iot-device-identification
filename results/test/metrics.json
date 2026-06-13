@@ -1,0 +1,73 @@
+{
+  "evaluation_role": "external-file-level-ensemble",
+  "evaluation_unit": "source_file",
+  "data_dir": null,
+  "manifest": "data/recordings_manifest.csv",
+  "manifest_split": "test",
+  "model": "models/best_iot_classifier.h5",
+  "files": 18,
+  "correct_device_files": 18,
+  "device_accuracy": 1.0,
+  "device_accuracy_ci_95_wilson": {
+    "low": 0.8241154494176252,
+    "high": 1.0
+  },
+  "correct_location_files": 13,
+  "location_accuracy": 0.7222222222222222,
+  "location_accuracy_ci_95_wilson": {
+    "low": 0.49126922453805477,
+    "high": 0.8750043085364452
+  },
+  "interpretation": "Each file contributes one prediction; window count is not the number of independent test examples.",
+  "scenario_metrics": {
+    "anotherroom": {
+      "files": 6,
+      "device_correct_files": 6,
+      "device_accuracy": 1.0,
+      "device_accuracy_ci_95_wilson": {
+        "low": 0.6096569663469354,
+        "high": 1.0
+      },
+      "location_correct_files": 2,
+      "location_accuracy": 0.3333333333333333,
+      "location_accuracy_ci_95_wilson": {
+        "low": 0.09676933255921683,
+        "high": 0.7000116786584712
+      }
+    },
+    "sameroom": {
+      "files": 6,
+      "device_correct_files": 6,
+      "device_accuracy": 1.0,
+      "device_accuracy_ci_95_wilson": {
+        "low": 0.6096569663469354,
+        "high": 1.0
+      },
+      "location_correct_files": 6,
+      "location_accuracy": 1.0,
+      "location_accuracy_ci_95_wilson": {
+        "low": 0.6096569663469354,
+        "high": 1.0
+      }
+    },
+    "upstairs": {
+      "files": 6,
+      "device_correct_files": 6,
+      "device_accuracy": 1.0,
+      "device_accuracy_ci_95_wilson": {
+        "low": 0.6096569663469354,
+        "high": 1.0
+      },
+      "location_correct_files": 5,
+      "location_accuracy": 0.8333333333333334,
+      "location_accuracy_ci_95_wilson": {
+        "low": 0.43649056343635395,
+        "high": 0.9699474141282697
+      }
+    }
+  },
+  "window_size": 4096,
+  "step": 1024,
+  "aggregation": "mean",
+  "top_fraction": 0.25
+}

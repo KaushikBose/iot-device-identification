@@ -1,0 +1,12 @@
+              precision    recall  f1-score   support
+
+   dooralarm       0.56      0.80      0.66      7323
+        lora       0.96      0.43      0.60      7323
+  microphone       0.99      1.00      1.00      7323
+        mbus       0.51      0.80      0.63      7323
+      sigfox       0.46      0.43      0.44      7323
+        miwi       0.78      0.50      0.61      7323
+
+    accuracy                           0.66     43938
+   macro avg       0.71      0.66      0.66     43938
+weighted avg       0.71      0.66      0.66     43938

@@ -1,0 +1,272 @@
+{
+  "data/recordings/dooralarm/anotherroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.7670368898948204,
+      "lora": 0.0021504228899275105,
+      "microphone": 2.4928787172420897e-05,
+      "mbus": 0.06316519115617716,
+      "sigfox": 0.0724389346786979,
+      "miwi": 0.09518363259320457
+    },
+    "location_probabilities": {
+      "anotherroom": 0.7412736298302122,
+      "sameroom": 0.11669010876134833,
+      "upstairs": 0.1420362614084396
+    }
+  },
+  "data/recordings/dooralarm/upstairs_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.6379346629458011,
+      "lora": 0.0004717718148418596,
+      "microphone": 2.3659986064434944e-05,
+      "mbus": 0.0717410391186213,
+      "sigfox": 0.15122816816831863,
+      "miwi": 0.13860069796635266
+    },
+    "location_probabilities": {
+      "anotherroom": 0.5344601232146449,
+      "sameroom": 0.1241425760789714,
+      "upstairs": 0.34139730070638363
+    }
+  },
+  "data/recordings/dooralarm/sameroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.7341406846491219,
+      "lora": 0.03619749184448473,
+      "microphone": 3.593544262961759e-06,
+      "mbus": 0.01620449258169639,
+      "sigfox": 0.09732664636106957,
+      "miwi": 0.11612709101936435
+    },
+    "location_probabilities": {
+      "anotherroom": 0.17605027291084166,
+      "sameroom": 0.6666061546172185,
+      "upstairs": 0.15734357247193984
+    }
+  },
+  "data/recordings/lora/anotherroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.04971963353866519,
+      "lora": 0.7061473232547129,
+      "microphone": 1.4058660187312656e-05,
+      "mbus": 0.00473026393742558,
+      "sigfox": 0.2250582555286238,
+      "miwi": 0.014330465080385353
+    },
+    "location_probabilities": {
+      "anotherroom": 0.33060530275387484,
+      "sameroom": 0.4324922372940379,
+      "upstairs": 0.2369024599520872
+    }
+  },
+  "data/recordings/lora/upstairs_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.030945714880550645,
+      "lora": 0.9516893321629039,
+      "microphone": 9.235302634023865e-06,
+      "mbus": 0.0005222530537766834,
+      "sigfox": 0.008678559537596706,
+      "miwi": 0.008154905062538015
+    },
+    "location_probabilities": {
+      "anotherroom": 0.19754406430870647,
+      "sameroom": 0.14397185118767594,
+      "upstairs": 0.6584840845036176
+    }
+  },
+  "data/recordings/lora/sameroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.015830442442303246,
+      "lora": 0.7707521745332913,
+      "microphone": 7.501512260985389e-06,
+      "mbus": 3.333009563332988e-05,
+      "sigfox": 0.2132970128762306,
+      "miwi": 7.953854028061182e-05
+    },
+    "location_probabilities": {
+      "anotherroom": 0.21420760697232108,
+      "sameroom": 0.630618995342472,
+      "upstairs": 0.1551733976852069
+    }
+  },
+  "data/recordings/microphone/anotherroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 3.326839533326367e-05,
+      "lora": 7.676088296838937e-05,
+      "microphone": 0.9979105053039279,
+      "mbus": 0.0013446725761116665,
+      "sigfox": 0.00019273678617973448,
+      "miwi": 0.0004420560554790902
+    },
+    "location_probabilities": {
+      "anotherroom": 0.47300333549436835,
+      "sameroom": 0.5227661343990062,
+      "upstairs": 0.004230530106625411
+    }
+  },
+  "data/recordings/microphone/upstairs_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.0001272021841242126,
+      "lora": 0.00010822805857750918,
+      "microphone": 0.9989730791683687,
+      "mbus": 0.0005146944443455574,
+      "sigfox": 2.9255249136287904e-05,
+      "miwi": 0.00024754089544766294
+    },
+    "location_probabilities": {
+      "anotherroom": 0.004930443612955868,
+      "sameroom": 0.001767008603729194,
+      "upstairs": 0.993302547783315
+    }
+  },
+  "data/recordings/microphone/sameroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 3.533895683354687e-05,
+      "lora": 4.739526047852039e-05,
+      "microphone": 0.9984091832184806,
+      "mbus": 0.0009590019837985088,
+      "sigfox": 0.00019775994922471135,
+      "miwi": 0.00035132063118422686
+    },
+    "location_probabilities": {
+      "anotherroom": 0.4676989167765836,
+      "sameroom": 0.5289636375073622,
+      "upstairs": 0.0033374457160541566
+    }
+  },
+  "data/recordings/mbus/anotherroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.09768092681417058,
+      "lora": 0.005177283852975266,
+      "microphone": 3.880152396581721e-06,
+      "mbus": 0.4109708455064844,
+      "sigfox": 0.14383528788945654,
+      "miwi": 0.3423317757845167
+    },
+    "location_probabilities": {
+      "anotherroom": 0.3447631460172461,
+      "sameroom": 0.3844432901912244,
+      "upstairs": 0.27079356379152936
+    }
+  },
+  "data/recordings/mbus/upstairs_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.0008109012048801405,
+      "lora": 0.0011426691366246521,
+      "microphone": 8.614577426057455e-07,
+      "mbus": 0.9659394021307603,
+      "sigfox": 0.013366878561091837,
+      "miwi": 0.018739287508900436
+    },
+    "location_probabilities": {
+      "anotherroom": 0.07318510289959985,
+      "sameroom": 0.14129497473406305,
+      "upstairs": 0.785519922366337
+    }
+  },
+  "data/recordings/mbus/sameroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.054323473347239325,
+      "lora": 0.002921062273269932,
+      "microphone": 8.684107676931817e-07,
+      "mbus": 0.7586404913439837,
+      "sigfox": 0.10541617675191652,
+      "miwi": 0.07869792787282288
+    },
+    "location_probabilities": {
+      "anotherroom": 0.23498457754049293,
+      "sameroom": 0.402477994021095,
+      "upstairs": 0.3625374284384121
+    }
+  },
+  "data/recordings/sigfox/anotherroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.002546160147637556,
+      "lora": 0.032134499012009904,
+      "microphone": 3.7435769739750893e-06,
+      "mbus": 0.04130922923612439,
+      "sigfox": 0.5728196975940356,
+      "miwi": 0.35118667043321855
+    },
+    "location_probabilities": {
+      "anotherroom": 0.3298075259070184,
+      "sameroom": 0.28565903169814694,
+      "upstairs": 0.3845334423948347
+    }
+  },
+  "data/recordings/sigfox/upstairs_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.08157534311067871,
+      "lora": 0.0054361079553943,
+      "microphone": 9.373648888383372e-06,
+      "mbus": 0.1260005856589526,
+      "sigfox": 0.6850352529786667,
+      "miwi": 0.1019433366474192
+    },
+    "location_probabilities": {
+      "anotherroom": 0.21618719625383323,
+      "sameroom": 0.26347367722486664,
+      "upstairs": 0.5203391265213002
+    }
+  },
+  "data/recordings/sigfox/sameroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.12537129819083292,
+      "lora": 0.09152291522974543,
+      "microphone": 6.004514998039421e-06,
+      "mbus": 0.01781134429895044,
+      "sigfox": 0.710622803932039,
+      "miwi": 0.054665633833434195
+    },
+    "location_probabilities": {
+      "anotherroom": 0.16524401383737772,
+      "sameroom": 0.7318481236598094,
+      "upstairs": 0.10290786250281278
+    }
+  },
+  "data/recordings/miwi/anotherroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.24372125274588333,
+      "lora": 0.004594152743185531,
+      "microphone": 0.0004927996399941421,
+      "mbus": 0.09953253798027145,
+      "sigfox": 0.16193162251313606,
+      "miwi": 0.4897276343775295
+    },
+    "location_probabilities": {
+      "anotherroom": 0.5626216066253653,
+      "sameroom": 0.2453204581639678,
+      "upstairs": 0.19205793521066683
+    }
+  },
+  "data/recordings/miwi/upstairs_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 4.967980742404755e-05,
+      "lora": 0.00020531832622476786,
+      "microphone": 9.378668013121266e-07,
+      "mbus": 0.0006241189038855231,
+      "sigfox": 0.002299348303291631,
+      "miwi": 0.9968205967923728
+    },
+    "location_probabilities": {
+      "anotherroom": 0.017913742016187183,
+      "sameroom": 0.006660920340777464,
+      "upstairs": 0.9754253376430353
+    }
+  },
+  "data/recordings/miwi/sameroom_capture21.npy": {
+    "device_probabilities": {
+      "dooralarm": 0.042847482078247845,
+      "lora": 0.0003005959228031776,
+      "microphone": 1.91183510563477e-05,
+      "mbus": 0.18286120144137902,
+      "sigfox": 0.01611075704379901,
+      "miwi": 0.7578608451627147
+    },
+    "location_probabilities": {
+      "anotherroom": 0.11678703304267868,
+      "sameroom": 0.550685709190496,
+      "upstairs": 0.3325272577668253
+    }
+  }
+}

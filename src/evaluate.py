@@ -158,14 +158,13 @@ def run_evaluation(
     y_dev_cat = tf.keras.utils.to_categorical(y_dev, len(classes))
     y_loc_cat = tf.keras.utils.to_categorical(y_loc, len(locations))
 
-    test_results = model.evaluate(
+    test_metrics = model.evaluate(
         x,
         {"device": y_dev_cat, "location": y_loc_cat},
         batch_size=batch_size,
         verbose=0,
+        return_dict=True,
     )
-    metrics_names = model.metrics_names
-    test_metrics = dict(zip(metrics_names, test_results))
 
     device_probs, location_probs = model.predict(x, batch_size=batch_size, verbose=0)
     y_dev_pred = np.argmax(device_probs, axis=1)
