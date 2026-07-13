@@ -1,3 +1,35 @@
+IoT Device Identification from RF Signals
+
+Why I looked into this: As IoT devices proliferate on networks, telecom operators and security teams need to know what's connected — often without cooperation from the device itself. This project explores whether RF signal characteristics alone can reliably identify device type, which is directly relevant to network visibility and security products (e.g. rogue device detection, network access control).
+
+The problem
+
+Traditional device fingerprinting relies on protocol-level metadata (MAC address, DHCP fingerprints), which can be spoofed or unavailable. This project tests a physical-layer approach: can a device be identified purely from the RF spectrogram of its transmissions?
+
+Approach
+
+
+Convert raw RF signal captures into spectrograms (time-frequency representations)
+Train a CNN-based classifier to distinguish device types from spectrogram images
+Use a sliding-window ensemble at inference time — classifying multiple overlapping signal windows and aggregating predictions — to improve robustness over a single snapshot
+
+
+(Add 2-3 sentences here on the dataset used, number of device classes, and your actual accuracy/results once you re-run or extend the notebook.)
+
+What I took away from this (product lens)
+
+
+Physical-layer identification is a promising complement to protocol-based fingerprinting, but needs enough labeled RF data per device class to generalize — a real constraint for any product built on this approach
+Sliding-window ensembling trades inference latency for accuracy — a classic product tradeoff between "detect fast" vs. "detect confidently," which matters for real-time network security use cases
+
+Tech
+
+Python, CNN (deep learning), signal processing (spectrograms)
+
+Further Improvement as per IITD Professors (Going on)
+
+This is a structurally sound pipeline that smartly utilizes a Stop-Gradient layer to prevent location gradients from corrupting device features in the dual-head CNN. Enforcing recording-level data splits to prevent window-level leakage demonstrates strong methodological maturity. However, the reported 100% file-level device accuracy is statistically thin due to the exceptionally small test set of just 18 recordings. Furthermore, the model's 50% accuracy on "another room" predictions highlights a key limitation: discarding phase information in favor of magnitude-only spectrograms washes out the multipath delay signatures needed to resolve environmental ambiguity.
+
 # IoT RF Device Classification
 
 This project classifies recorded RF signals from six IoT device/protocol
